@@ -1,0 +1,120 @@
+/* UTAMA: KARTU PEMBUKA FULL SCREEN */
+.card {
+  width: 90%;               /* lebar hampir penuh layar HP */
+  max-width: 400px;         /* lebar maksimal untuk desktop */
+  min-height: 90vh;         /* tinggi hampir penuh layar HP */
+  margin: 20px auto;        /* jarak atas bawah dan center horizontal */
+  padding: 40px 25px;       /* padding atas/bawah & kiri/kanan */
+  background-image: url('weddingcover.png'); /* latar kartu */
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;  
+  border-radius: 25px;           
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15); 
+  color: white;
+  text-shadow: 0 0 5px rgba(194, 194, 194, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* konten mulai dari atas */
+}
+
+/* Konten di dalam kartu tetap agak turun dari atas */
+.card > * {
+  margin-top: auto;
+  transform: translateY(-10%); /* geser sedikit ke atas agar tidak mepet bawah */
+}
+
+/* Responsif untuk HP kecil */
+@media (max-width: 480px) {
+  .card {
+    width: 95%;       
+    padding: 30px 15px; 
+    min-height: 85vh;
+  }
+}
+
+/* Responsif untuk laptop */
+@media (min-width: 1024px) {
+  .card {
+    width: 400px;  
+    height: 600px; 
+    padding: 50px 25px;
+  }
+}
+
+/* Header kartu */
+.card-header {
+  text-align: center; /* Heading tetap center */
+  margin-bottom: 40px; /* jarak ke bagian tamu */
+}
+
+/* Subtitle: The Wedding Of */
+.wedding-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-top: -100px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* bayangan teks */
+  -webkit-text-stroke: 0.5px #000000;
+  margin-bottom: 10px; /* Jarak ke nama mempelai */
+  text-align: center; /* Tetap di tengah horizontal */
+}
+
+
+.wedding-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3rem, 6vw, 3.5rem);
+  color: #ef5fac;
+}
+
+.wedding-names span {
+  display: block;
+  line-height: 1.2;
+}
+
+.wedding-names span:nth-child(2) {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/* Bagian tamu */
+.tamu {
+  margin-top: auto; /* tetap di bawah kartu */
+  text-align: center;
+}
+
+.tamu-text {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #fff;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 1px 1px 2px rgba(0,0,0,0.7);
+
+  margin: 0.5rem 0;
+}
+
+.guest-name {
+  color: #ff006f;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  background-color: #ff85c1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: pink;
+  transform: scale(1.05);
+}

@@ -1,0 +1,294 @@
+/* ================= RESET & FONT ================= */
+* {
+  margin: 0; /* hapus margin default semua elemen */
+  padding: 0; /* hapus padding default semua elemen */
+  text-align: center; /* teks center secara default */
+  font-size: 14px; /* ukuran font dasar kecil agar mobile-friendly */
+  box-sizing: border-box; /* padding/border tidak menambah lebar elemen */
+  font-family: 'Poppins', sans-serif; /* font default halaman */
+}
+
+/* ================= BODY & BACKGROUND ================= */
+body {
+  background: url('Pink rose.jpg') no-repeat center center fixed; /* gambar full screen */
+  background-size: cover; /* menutupi seluruh layar */
+  background-position: center; /* posisikan tengah */
+  overflow-x: hidden; /* hindari scroll horizontal */
+  font-family: 'Poppins', sans-serif; /* font default */
+}
+
+/* Overlay putih transparan agar teks tetap terbaca */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7); /* overlay putih 70% */
+  z-index: -1; /* di bawah konten */
+}
+
+/* ================= TYPOGRAPHY ================= */
+h1, h2, h3, .title1, .title2, .section-title3 {
+  font-family: 'Dancing Script', cursive; /* font heading */
+  color: #d1005b; /* warna pink gelap */
+  margin-bottom: 0.5rem; /* jarak bawah heading */
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.1rem; }
+
+/* ================= THANK YOU BOX ================= */
+.thankyou-container {
+  display: flex;
+  justify-content: center; /* center horizontal */
+  padding: 20px 10px;
+}
+
+.thankyou-box {
+  background-color: pink; /* latar pink */
+  max-width: 320px; /* lebar maksimal */
+  width: 95%; /* responsive */
+  padding: 20px 15px;
+  border-radius: 15px; /* sudut membulat */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* shadow lembut */
+  text-align: center;
+  color: #d1005b; /* teks pink gelap */
+}
+
+/* ================= HALAMAN UTAMA / SECTION ================= */
+.page, .page2 {
+  display: flex;
+  flex-direction: column; /* konten vertical */
+  justify-content: center; /* center vertical */
+  align-items: center; /* center horizontal */
+  min-height: 100vh; /* full screen height */
+  padding: 1rem 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================= MEMPELAI ================= */
+.mempelai img {
+  max-width: 90px; /* ukuran maksimal gambar */
+  width: 100%; /* responsive */
+  height: auto;
+  border-radius: 50%; /* lingkaran */
+  margin-top: 10px;
+}
+
+/* ================= COUNTDOWN ================= */
+.countdown-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.countdown-container h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  color: #d1005b;
+  margin-bottom: 15px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center; /* rata tengah */
+  gap: 8px; /* jarak antar item */
+  flex-wrap: wrap; /* wrap jika sempit */
+}
+
+.countdown-item {
+  background-color: #ffe5ec; /* latar pink muda */
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-width: 60px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* shadow lembut */
+}
+
+.countdown-item span {
+  display: block;
+  font-weight: bold; /* teks tebal */
+  font-size: 1.4rem;
+  color: #b30049; /* teks gelap */
+}
+
+.countdown-item small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  color: #d1005b; 
+  font-weight: 600;
+}
+
+/* ================= CAROUSEL / GALERI ================= */
+.carousel-container {
+  max-width: 320px;
+  width: 95%;
+  margin: 1.5rem auto 1rem;
+  overflow-x: hidden; /* sembunyikan overflow */
+  border-radius: 12px;
+  background-color: pink;
+  box-shadow: 0 5px 10px rgba(255,57,57,0.15);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  animation: slide 20s linear infinite; /* animasi scroll gambar */
+  width: max-content;
+}
+
+.carousel-track img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05); /* efek hover membesar */
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ================= EVENT SECTION ================= */
+#event {
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+}
+
+#event .header h2 {
+  margin-bottom: 0.8rem;
+}
+
+#event .event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.event {
+  background-color: pink;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 95%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #444;
+}
+
+.event h1 {
+  color: #d1005b;
+  margin-bottom: 0.5rem;
+}
+
+.event .p1 {
+  font-size: 0.9rem;
+}
+
+/* ================= RSVP & HADIAH ================= */
+.rsvp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 1.5rem auto;
+  padding: 0 10px;
+}
+
+.rsvp-section {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-title3 {
+  font-size: 1.3rem;
+  color: #ff6b81;
+  margin-bottom: 15px;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form label {
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #e55a70;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: rgba(255, 255, 255, 0.9); /* transparan putih */
+  padding: 12px 0;
+  position: fixed; /* selalu di bawah layar */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around; /* ikon merata */
+  align-items: center;
+  list-style: none;
+}
+
+.footer li {
+  display: inline-block;
+}
+
+.footer img {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s; /* efek smooth hover */
+}
+
+.footer img:hover {
+  transform: scale(1.2); /* membesar saat hover */
+}
